@@ -27,5 +27,7 @@ function singleRound(playerSelection, computerSelection){
         return "You lose! Rock beats scissors"
     } else if(playerSelection.lowercase() == "scissors" && computerSelection == "paper"){
         return "You win! Scissors beats paper"
-    } 
+    } else {
+        return "you made an invalid choice"
+    }
 }
