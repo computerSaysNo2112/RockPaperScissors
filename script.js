@@ -12,3 +12,20 @@ function computerPlay(){
 }
 
 
+function singleRound(playerSelection, computerSelection){
+    if(playerSelection == computerSelection){
+        return "You made the same choice. This is a draw"
+    } else if(playerSelection.lowercase() == "rock" && computerSelection == "paper"){
+        return " You lose! Paper beats rock!"
+    } else if(playerSelection.lowercase() == "rock" && computerSelection == "scissors"){
+        return "You win! Rock beats scissors!"
+    } else if(playerSelection.lowercase() == "paper" && computerSelection == "rock"){
+        return "You win! Paper beats rock"
+    } else if(playerSelection.lowercase() == "paper" && computerSelection == "scissors"){
+        return "You lose! Scissors beats rock"
+    } else if(playerSelection.lowercase() == "scissors" && computerSelection == "rock"){
+        return "You lose! Rock beats scissors"
+    } else if(playerSelection.lowercase() == "scissors" && computerSelection == "paper"){
+        return "You win! Scissors beats paper"
+    } 
+}
