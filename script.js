@@ -1,6 +1,6 @@
 //Generates random number between 0 and 150.
 // Returns either rock, paper, scissor based on random number
-function computerPlay(){
+const computerChoice = function computerPlay(){
     let randomNum = Math.floor(Math.random()*150);
     if (randomNum >= 0 && randomNum <= 50){
         return "rock"
@@ -11,23 +11,33 @@ function computerPlay(){
     }       
 }
 
+const playerChoice = function() {
+    return prompt("Rock Paper or Scissors?")
+ }
+ 
 
+//Play single round
 function singleRound(playerSelection, computerSelection){
     if(playerSelection == computerSelection){
         return "You made the same choice. This is a draw"
-    } else if(playerSelection.lowercase() == "rock" && computerSelection == "paper"){
+    } else if(playerSelection.toLowerCase() == "rock" && computerSelection == "paper"){
         return " You lose! Paper beats rock!"
-    } else if(playerSelection.lowercase() == "rock" && computerSelection == "scissors"){
+    } else if(playerSelection.toLowerCase() == "rock" && computerSelection == "scissors"){
         return "You win! Rock beats scissors!"
-    } else if(playerSelection.lowercase() == "paper" && computerSelection == "rock"){
+    } else if(playerSelection.toLowerCase() == "paper" && computerSelection == "rock"){
         return "You win! Paper beats rock"
-    } else if(playerSelection.lowercase() == "paper" && computerSelection == "scissors"){
-        return "You lose! Scissors beats rock"
-    } else if(playerSelection.lowercase() == "scissors" && computerSelection == "rock"){
-        return "You lose! Rock beats scissors"
-    } else if(playerSelection.lowercase() == "scissors" && computerSelection == "paper"){
+    } else if(playerSelection.toLowerCase() == "paper" && computerSelection == "scissors"){
+        return "You lose! Scissors beats Paper"
+    } else if(playerSelection.toLowerCase() == "scissors" && computerSelection == "rock"){
+        return "You lose! Rock beats Scissors"
+    } else if(playerSelection.toLowerCase() == "scissors" && computerSelection == "paper"){
         return "You win! Scissors beats paper"
     } else {
         return "you made an invalid choice"
     }
 }
+
+
+console.log(singleRound(playerChoice(), computerChoice()));
+console.log(singleRound(playerChoice(), computerChoice()));
+
