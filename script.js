@@ -1,6 +1,6 @@
 //Generates random number between 0 and 150.
 // Returns either rock, paper, scissor based on random number
-const computerChoice = function computerPlay(){
+let computerChoice = function computerPlay(){
     let randomNum = Math.floor(Math.random()*150);
     if (randomNum >= 0 && randomNum <= 50){
         return "rock"
@@ -14,14 +14,16 @@ const computerChoice = function computerPlay(){
 const playerChoice = function() {
     return prompt("Rock Paper or Scissors?")
  }
- 
+
+// let playerChoice = "rock"
+
 
 //Play single round
-function singleRound(playerSelection, computerSelection){
+function playRound(playerSelection, computerSelection){
     if(playerSelection == computerSelection){
         return "You made the same choice. This is a draw"
     } else if(playerSelection.toLowerCase() == "rock" && computerSelection == "paper"){
-        return " You lose! Paper beats rock!"
+        return "You lose! Paper beats rock!"
     } else if(playerSelection.toLowerCase() == "rock" && computerSelection == "scissors"){
         return "You win! Rock beats scissors!"
     } else if(playerSelection.toLowerCase() == "paper" && computerSelection == "rock"){
@@ -38,6 +40,16 @@ function singleRound(playerSelection, computerSelection){
 }
 
 
-console.log(singleRound(playerChoice(), computerChoice()));
-console.log(singleRound(playerChoice(), computerChoice()));
+// Plays 5 rounds and decides the winner
+function game() {
+    for(let i = 0 ; i <= 4 ; i++){
+        
+        console.log(playRound(playerChoice(), computerChoice()));
 
+    }
+
+    
+}
+
+
+game();
