@@ -42,14 +42,37 @@ function playRound(playerSelection, computerSelection){
 
 // Plays 5 rounds and decides the winner
 function game() {
-    for(let i = 0 ; i <= 4 ; i++){
-        
-        console.log(playRound(playerChoice(), computerChoice()));
+    //counters
+    let computerScore = 0;
+    let playerScore = 0;
 
+    for(let i = 0 ; i <= 4 ; i++){
+        let result = playRound(playerChoice(), computerChoice());
+        console.log(result);
+
+        if (result == "You lose! Paper beats rock!" || result == "You lose! Scissors beats Paper" || result == "You lose! Rock beats Scissors" || result == "you made an invalid choice") {
+            computerScore++
+        }
+        else if(result == "You made the same choice. This is a draw"){
+            
+        }
+        else{
+            playerScore++
+        }
+
+        console.log("computer score:" + computerScore)
+        console.log("player score:" + playerScore)
     }
 
-    
-}
+
+    if (computerScore > playerScore){
+        console.log("you lose this match");
+    } else if(computerScore == playerScore){
+        console.log("this is a draw")
+    } else {
+        console.log("you win this round")
+    }
+    }
 
 
 game();
