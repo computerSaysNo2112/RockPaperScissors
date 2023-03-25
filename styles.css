@@ -3,33 +3,6 @@ body{
     text-align: center;
 }
 
-/* .header{
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    font-size: 4vw;
-    color: #333;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-top: 50px;
-    opacity: 0;
-    transform: translateY(-50px);
-    animation-name: slide-in;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes slide-in {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
-
 .header {
     font-family: 'Russo One', sans-serif;
     font-size: 5em;
@@ -53,11 +26,6 @@ body{
     background: linear-gradient(45deg, #9c27b0, #673ab7, #3f51b5);
 }
 
-.innerText{
-    color:white;
-    padding-top:5%;
-    font-size: 2vw;
-}
 
 .image{
     width: 70%;
