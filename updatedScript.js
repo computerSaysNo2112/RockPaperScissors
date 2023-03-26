@@ -9,7 +9,19 @@ let playerChoice;
 
 rockBtn.addEventListener('click', () => {
     playerChoice = 'rock';
-    console.log('rock');
+    console.log(playerChoice);
+})
+
+
+paperBtn.addEventListener('click', () => {
+    playerChoice = 'paper';
+    console.log(playerChoice);
+})
+
+scissorsBtn.addEventListener('click', ()=>{
+    playerChoice = 'scissors';
+    console.log(playerChoice);
+
 })
 
 

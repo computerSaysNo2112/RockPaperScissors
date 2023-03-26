@@ -70,23 +70,44 @@ body h1{
     display: flex;
     justify-content: center;
     background-color:#fe6b8b;
-    border: 1px solid rgb(15, 1, 1);
+    border: 9px solid rgb(235, 232, 232);
     width: 50%;
     margin:0 auto; 
     border-radius: 30px;
+    font-size:1.2vw;
 }
 
-.scoreboard div{
-    /* background-color:#faf9f897; */
+.playerScore .scoreTitle{
+    margin: 0;
+    padding: 2%;
+    border: 1px solid black;
+    border-top-left-radius: 20px;
+}
+
+.computerScore .scoreTitle{
+    margin: 0;
+    padding: 2%;
+    border: 1px solid black;
+    border-top-right-radius: 20px;
+}
+
+.playerScore, .computerScore{
     width: 100%;
 }
 
-.computerScore{
-      border-left: 2px solid rgb(49, 6, 6);
+.playerScore h3:last-child {
+    border-bottom-left-radius: 20px;
+  }
+
+.computerScore h3:last-child{
+    border-bottom-right-radius: 20px;
+
 }
+  
+
 
 .test{
-    background-color:white; 
+    background-color:#fbd6c2; 
     margin:0;
     border:1px solid black;
 }
