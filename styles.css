@@ -1,8 +1,17 @@
+/* Body and text styles */
 body{
     background:black;
     text-align: center;
 }
 
+body h1 {
+    color: white;
+    margin: 0%;
+    margin-top: 5%;
+    font-size: 3vw;
+}
+
+/* Title */
 .header {
     font-family: 'Russo One', sans-serif;
     font-size: 5vw;
@@ -11,6 +20,7 @@ body{
     -webkit-text-fill-color: transparent;
   }
 
+/* buttons styling */
 .container{
     display: flex;
     justify-content:center;
@@ -23,28 +33,23 @@ body{
     color:white;
     border-radius: 12px;
     width:13%;
-    /* background: linear-gradient(45deg, #9c27b0, #673ab7, #3f51b5); */
     background-color: #3f51b5;
     border: 2px solid #ffffff00;
     padding: 0px;
 }
 
 .rock , .paper{
-        margin-right:5%;
-}
-
-.scissors{
-    margin-left:left;
+    margin-right:5%;
 }
 
 .rock:hover, .paper:hover, .scissors:hover{
     font-family: 'Russo One', sans-serif;
-    /* transform: scale(1.1); */
     box-shadow: 0 0 10px #f5f4f5, 0 0 20px #f6f6f7, 0 0 30px #3f51b5;
     background: linear-gradient(45deg, #fe6b8b, #ff8e53, #ffeb3b);
     color:#3f51b5;
     border: 2px solid #ededf1;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .innerText{
@@ -54,60 +59,8 @@ body{
 
 .image{
     width: 70%;
-    border-radius: 27px;
     margin:0% 2% 2% 2%;
     margin-bottom: 12%;
-}
-
-body h1{
-    color:white;
-    margin:0%;
-    margin-top:5%;
-    font-size: 3vw;
-}
-
-.scoreboard{
-    display: flex;
-    justify-content: center;
-    background-color:#fe6b8b;
-    border: 9px solid rgb(235, 232, 232);
-    width: 50%;
-    margin:0 auto; 
-    border-radius: 30px;
-    font-size:1.2vw;
-}
-
-.playerScore .scoreTitle{
-    margin: 0;
-    padding: 2%;
-    border: 1px solid black;
-    border-top-left-radius: 20px;
-}
-
-.computerScore .scoreTitle{
-    margin: 0;
-    padding: 2%;
-    border: 1px solid black;
-    border-top-right-radius: 20px;
-}
-
-.playerScore, .computerScore{
-    width: 100%;
-}
-
-.playerScore h3:last-child {
-    border-bottom-left-radius: 20px;
-  }
-
-.computerScore h3:last-child{
-    border-bottom-right-radius: 20px;
-
-}
-
-.test{
-    background-color:#fbd6c2; 
-    margin:0;
-    border:1px solid black;
 }
 
 
