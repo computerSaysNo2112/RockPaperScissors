@@ -5,8 +5,10 @@ var scissors = document.querySelector(".scissors");
 
 // get display result from html
 var displayResult = document.querySelector(".displayResult");
-var column1 = document.querySelector(".column1");
-var column2 = document.querySelector(".column2");
+// var column1 = document.querySelector(".column1");
+// var column2 = document.querySelector(".column2");
+var playerScore = document.querySelector(".playerScore");
+var computerScore = document.querySelector(".computerScore");
 
 // function for computer to choose rock paper or scissors
 let computerSelection = () => {
@@ -46,10 +48,12 @@ scissors.addEventListener("click", () => {
 //output result to console
 function playRound(player, computer) {
   if (player == computer) {
-    // displayResult.textContent = "You made the same choice. This is a draw";
-
-    column1.textContent = player;
-    column2.textContent = computer;
+    const playertag = document.createElement("p");
+    const computertag = document.createElement("p");
+    playertag.textContent = player;
+    computertag.textContent = computer;
+    playerScore.appendChild(playertag);
+    computerScore.appendChild(computertag);
     return "You made the same choice. This is a draw";
   } else if (player == "rock" && computer == "paper") {
     return "You lose! Paper beats rock!";
