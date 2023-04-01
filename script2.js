@@ -38,6 +38,7 @@ scissors.addEventListener("click", () => {
 });
 
 // play single round
+//output result to console
 function playRound(player, computer) {
   if (player == computer) {
     return "You made the same choice. This is a draw";
