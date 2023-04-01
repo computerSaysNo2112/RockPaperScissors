@@ -2,6 +2,7 @@
 body{
     background:black;
     text-align: center;
+    color: #ededf1;
 }
 
 body h1 {
@@ -63,7 +64,53 @@ body h1 {
     margin-bottom: 12%;
 }
 
+/* results  */
 
+/* flexbox */
+.displayResults{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+/* flex item 1 and 3 */
+.playerScore , .computerScore{
+    flex-basis: 12%;
+    background-color: #ffeb3793;
+    color:black;
+    padding: 1%;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4%;
+}
+/* flex item 2 */
+.divider {
+    width: 1px;
+    background-color: #ccc;
+    margin: 0 20px;
+}
+
+.player, .computer {
+    color:black;
+    border-radius: 4%;
+    border-bottom: 2px solid #020307;
+    padding: 2%;
+    font-weight: bold;
+    font-size: larger;
+}
+
+/* avatar */
+.avatar{
+    width: 70%;
+    margin: 0% 2% 2% 2%;
+    margin-bottom: 2%;
+}
+
+/* rows */
+.column1, .column2{
+    border: 1px solid #ccc;
+    margin:3%;
+}
 
 
 
