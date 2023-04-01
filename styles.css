@@ -71,23 +71,34 @@ body h1 {
     display: flex;
     align-items: stretch;
     justify-content: center;
+    background-color: #f273f01d;
+    padding: 1%;
 }
 
 /* flex item 1 and 3 */
 .playerScore , .computerScore{
     flex-basis: 12%;
-    background-color: #ffeb3793;
+    background-color: #ff8e53;
     color:black;
     padding: 1%;
     text-align: center;
     font-weight: bold;
-    border-radius: 4%;
+}
+
+.playerScore{
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+}
+
+.computerScore{
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
 }
 /* flex item 2 */
 .divider {
-    width: 1px;
-    background-color: #ccc;
-    margin: 0 20px;
+    width: 2px;
+    background-color: #090202;
+    /* margin: 0 20px; */
 }
 
 .player, .computer {
@@ -96,20 +107,21 @@ body h1 {
     border-bottom: 2px solid #020307;
     padding: 2%;
     font-weight: bold;
-    font-size: larger;
+    font-size: 2vw;
 }
 
 /* avatar */
 .avatar{
-    width: 70%;
+    width: 40px;
     margin: 0% 2% 2% 2%;
     margin-bottom: 2%;
 }
 
 /* rows */
 .column1, .column2{
-    border: 1px solid #ccc;
+    background-color: #fef5a2;
     margin:3%;
+    padding: 1%;
 }
 
 
