@@ -52,20 +52,70 @@ function playRound(player, computer) {
     const computertag = document.createElement("p");
     playertag.textContent = player;
     computertag.textContent = computer;
+    playertag.classList.add("column1");
+    computertag.classList.add("column2");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
     return "You made the same choice. This is a draw";
   } else if (player == "rock" && computer == "paper") {
+    const playertag = document.createElement("p");
+    const computertag = document.createElement("p");
+    playertag.textContent = player;
+    computertag.textContent = computer;
+    playertag.classList.add("column1");
+    computertag.classList.add("column2");
+    playerScore.appendChild(playertag);
+    computerScore.appendChild(computertag);
     return "You lose! Paper beats rock!";
   } else if (player == "rock" && computer == "scissors") {
+    const playertag = document.createElement("p");
+    const computertag = document.createElement("p");
+    playertag.textContent = player;
+    computertag.textContent = computer;
+    playertag.classList.add("column1");
+    computertag.classList.add("column2");
+    playerScore.appendChild(playertag);
+    computerScore.appendChild(computertag);
     return "You win! Rock beats scissors!";
   } else if (player == "paper" && computer == "rock") {
+    const playertag = document.createElement("p");
+    const computertag = document.createElement("p");
+    playertag.textContent = player;
+    computertag.textContent = computer;
+    playertag.classList.add("column1");
+    computertag.classList.add("column2");
+    playerScore.appendChild(playertag);
+    computerScore.appendChild(computertag);
     return "You win! Paper beats rock";
   } else if (player == "paper" && computer == "scissors") {
+    const playertag = document.createElement("p");
+    const computertag = document.createElement("p");
+    playertag.textContent = player;
+    computertag.textContent = computer;
+    playertag.classList.add("column1");
+    computertag.classList.add("column2");
+    playerScore.appendChild(playertag);
+    computerScore.appendChild(computertag);
     return "You lose! Scissors beats Paper";
   } else if (player == "scissors" && computer == "rock") {
+    const playertag = document.createElement("p");
+    const computertag = document.createElement("p");
+    playertag.textContent = player;
+    computertag.textContent = computer;
+    playertag.classList.add("column1");
+    computertag.classList.add("column2");
+    playerScore.appendChild(playertag);
+    computerScore.appendChild(computertag);
     return "You lose! Rock beats Scissors";
   } else if (player == "scissors" && computer == "paper") {
+    const playertag = document.createElement("p");
+    const computertag = document.createElement("p");
+    playertag.textContent = player;
+    computertag.textContent = computer;
+    playertag.classList.add("column1");
+    computertag.classList.add("column2");
+    playerScore.appendChild(playertag);
+    computerScore.appendChild(computertag);
     return "You win! Scissors beats paper";
   } else {
     return "you made an invalid choice";

@@ -121,7 +121,8 @@ body h1 {
 .column1, .column2{
     background-color: #fef5a2;
     margin:3%;
-    padding: 1%;
+    padding: 1.9%;
+    border: 1px solid #090202;
 }
 
 
