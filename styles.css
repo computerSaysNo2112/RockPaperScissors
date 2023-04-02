@@ -37,6 +37,7 @@ body h1 {
     background-color: #3f51b5;
     border: 2px solid #ffffff00;
     padding: 0px;
+    box-shadow: inset 20px 20px 60px #c17979,
 }
 
 .rock , .paper{
@@ -45,7 +46,7 @@ body h1 {
 
 .rock:hover, .paper:hover, .scissors:hover{
     font-family: 'Russo One', sans-serif;
-    box-shadow: 0 0 10px #f5f4f5, 0 0 20px #f6f6f7, 0 0 30px #3f51b5;
+    box-shadow: 0 0 10px #f5f4f5, 0 0 20px #1212ca, 0 0 30px #3f51b5;
     background: linear-gradient(45deg, #fe6b8b, #ff8e53, #ffeb3b);
     color:#3f51b5;
     border: 2px solid #ededf1;
@@ -86,13 +87,15 @@ body h1 {
 }
 
 .playerScore{
-    border-top-left-radius: 10%;
-    border-bottom-left-radius: 10%;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 7%;
+    background: linear-gradient(45deg, #fe6b8b, #ff8e53, #ffeb3b);
 }
 
 .computerScore{
-    border-top-right-radius: 10%;
-    border-bottom-right-radius: 10%;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 7%;
+    background: linear-gradient(0deg, #fe6b8b, #ff8e53, #ffeb3b);
 }
 /* flex item 2 */
 .divider {
@@ -101,9 +104,8 @@ body h1 {
     /* margin: 0 20px; */
 }
 
-.player, .computer {
+.playerText, .computerText {
     color:black;
-    border-radius: 4%;
     border-bottom: 2px solid #020307;
     padding: 2%;
     font-weight: bold;
@@ -120,10 +122,51 @@ body h1 {
 /* rows */
 .column1, .column2{
     background-color: #fef5a2;
+    background: linear-gradient(145deg, #fd9494, #fef96b);
+    border: 1px solid rgb(223, 220, 213);
     margin:3%;
     padding: 1.9%;
-    border: 1px solid #090202;
+    border-radius: 12px;
+    color: black;
+    font-size: 1vw;
+    font-weight: lighter;
 }
+
+.win{
+    background: green;
+    border: 1px solid rgb(223, 220, 213);
+    margin:3%;
+    padding: 1.9%;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    font-size: 1vw;
+    font-weight: lighter;
+}
+
+.lose {
+    background: rgb(203, 5, 41);
+    border: 1px solid rgb(223, 220, 213);
+    margin: 3%;
+    padding: 1.9%;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    font-size: 1vw;
+    font-weight: lighter;
+}
+
+.draw {
+    background: rgb(92, 92, 92);
+    border: 1px solid rgb(223, 220, 213);
+    margin: 3%;
+    padding: 1.9%;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    font-size: 1vw;
+    font-weight: lighter;
+}
+
+
+
 
 
 

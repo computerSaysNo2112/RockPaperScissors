@@ -52,8 +52,8 @@ function playRound(player, computer) {
     const computertag = document.createElement("p");
     playertag.textContent = player;
     computertag.textContent = computer;
-    playertag.classList.add("column1");
-    computertag.classList.add("column2");
+    playertag.classList.add("draw");
+    computertag.classList.add("draw");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
     return "You made the same choice. This is a draw";
@@ -62,8 +62,8 @@ function playRound(player, computer) {
     const computertag = document.createElement("p");
     playertag.textContent = player;
     computertag.textContent = computer;
-    playertag.classList.add("column1");
-    computertag.classList.add("column2");
+    playertag.classList.add("lose");
+    computertag.classList.add("win");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
     return "You lose! Paper beats rock!";
@@ -72,8 +72,8 @@ function playRound(player, computer) {
     const computertag = document.createElement("p");
     playertag.textContent = player;
     computertag.textContent = computer;
-    playertag.classList.add("column1");
-    computertag.classList.add("column2");
+    playertag.classList.add("win");
+    computertag.classList.add("lose");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
     return "You win! Rock beats scissors!";
@@ -82,8 +82,8 @@ function playRound(player, computer) {
     const computertag = document.createElement("p");
     playertag.textContent = player;
     computertag.textContent = computer;
-    playertag.classList.add("column1");
-    computertag.classList.add("column2");
+    playertag.classList.add("win");
+    computertag.classList.add("lose");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
     return "You win! Paper beats rock";
@@ -92,8 +92,8 @@ function playRound(player, computer) {
     const computertag = document.createElement("p");
     playertag.textContent = player;
     computertag.textContent = computer;
-    playertag.classList.add("column1");
-    computertag.classList.add("column2");
+    playertag.classList.add("lose");
+    computertag.classList.add("win");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
     return "You lose! Scissors beats Paper";
@@ -102,8 +102,8 @@ function playRound(player, computer) {
     const computertag = document.createElement("p");
     playertag.textContent = player;
     computertag.textContent = computer;
-    playertag.classList.add("column1");
-    computertag.classList.add("column2");
+    playertag.classList.add("lose");
+    computertag.classList.add("win");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
     return "You lose! Rock beats Scissors";
@@ -112,8 +112,8 @@ function playRound(player, computer) {
     const computertag = document.createElement("p");
     playertag.textContent = player;
     computertag.textContent = computer;
-    playertag.classList.add("column1");
-    computertag.classList.add("column2");
+    playertag.classList.add("win");
+    computertag.classList.add("lose");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
     return "You win! Scissors beats paper";
