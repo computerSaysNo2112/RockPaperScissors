@@ -1,3 +1,3 @@
 # RockPaperScissors
- Game of rock paper and scissors
- 
+
+Game of rock paper and scissors

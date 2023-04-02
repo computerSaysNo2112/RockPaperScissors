@@ -1,12 +1,10 @@
-// get rock paper and scissors from html
+// get rock paper and scissors cards from html
 var rock = document.querySelector(".rock");
 var paper = document.querySelector(".paper");
 var scissors = document.querySelector(".scissors");
 
-// get display result from html
+// get Score from html
 var displayResult = document.querySelector(".displayResult");
-// var column1 = document.querySelector(".column1");
-// var column2 = document.querySelector(".column2");
 var playerScore = document.querySelector(".playerScore");
 var computerScore = document.querySelector(".computerScore");
 
