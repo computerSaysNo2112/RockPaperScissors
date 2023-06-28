@@ -9,48 +9,50 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body >
-    <h1 class="header"> Rock Paper Scissors </h1>
+<body>
+        <h1 class="header"> Rock Paper Scissors </h1>
+        <h1> Choose your weapon </h1>
 
-    <h1> Choose your weapon </h1>
-<!-- buttons -->
-    <div class="container" id="app">
-        <div class="rock">
-            <h3 class="innerText">Rock</h3>
-            <img class="image" src="https://cdn-icons-png.flaticon.com/512/10163/10163237.png" alt="">
-        </div>
-        <div class="paper">
-            <h3 class="innerText">Paper</h3>
-            <img class="image" src="https://cdn-icons-png.flaticon.com/512/2541/2541984.png" alt="">
-        </div>  
-        <div class="scissors">
-            <h3 class="innerText">Scissors</h3>
-            <img class="image" src="https://cdn-icons-png.flaticon.com/512/732/732457.png" alt="">
-        </div>
-    </div>
-
-
-
-<!-- flexbox -->
-    <div class="displayResults"> 
-<!-- flex item 1 -->
-        <div class="playerScore"> 
-            <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/6044/6044535.png" alt="Player icon">
-            <div class="playerText">Player</div> 
-        </div>
-<!-- flex item 2 -->
-        <div class="divider">
-            <!-- <img class="vs" src="https://cdn-icons-png.flaticon.com/512/6793/6793731.png" alt=""> -->
+    <!-- buttons -->
+        <div class="selections">
+            <div class="rockCard">
+                <h3 class="cardText">Rock</h3>
+                <img class="image" src="https://cdn-icons-png.flaticon.com/512/10163/10163237.png" alt="">
+            </div>
+            <div class="paperCard">
+                <h3 class="cardText">Paper</h3>
+                <img class="image" src="https://cdn-icons-png.flaticon.com/512/2541/2541984.png" alt="">
+            </div>  
+            <div class="scissorsCard">
+                <h3 class="cardText">Scissors</h3>
+                <img class="image" src="https://cdn-icons-png.flaticon.com/512/732/732457.png" alt="">
+            </div>
         </div>
 
-<!-- flex item 3 -->
-        <div class="computerScore">
-            <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/1068/1068549.png" alt="Player icon">
-            <div class="computerText">Computer</div>
+    <!-- Round tracker-->
+        <p class="scoreMessage"> Round :</p>
 
+     <!-- flexbox -->
+        <div class="displayResults"> 
+     <!-- flex item 1 -->
+            <div class="playerScore"> 
+                <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/6044/6044535.png" alt="Player icon">
+                <div class="playerText">Player :<span id="player"> </span></div> 
+            </div>
+     <!-- flex item 2 -->
+            <div class="divider">
+                <!-- <img class="vs" src="https://cdn-icons-png.flaticon.com/512/6793/6793731.png" alt=""> -->
+            </div>
+
+     <!-- flex item 3 -->
+            <div class="computerScore">
+                <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/1068/1068549.png" alt="Player icon">
+                <div class="computerText">Computer :<span id="computer"> </span></div>
+            </div>
         </div>
 
-    </div>
+
+
 
     <script  src="script2.js"></script>
 </body>

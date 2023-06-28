@@ -1,6 +1,6 @@
 /* Body and text styles */
 body{
-    background:black;
+    background:rgb(7, 7, 7);
     text-align: center;
     color: #ededf1;
 }
@@ -22,14 +22,14 @@ body h1 {
   }
 
 /* buttons styling */
-.container{
+.selections{
     display: flex;
     justify-content:center;
     margin-top:3%;
     margin-bottom:5%;
 }
 
-.rock, .paper, .scissors{
+.rockCard, .paperCard, .scissorsCard{
     font-family: 'Russo One', sans-serif;
     color:white;
     border-radius: 12px;
@@ -40,11 +40,11 @@ body h1 {
     box-shadow: inset 20px 20px 60px #c17979,
 }
 
-.rock , .paper{
+.rockCard , .paperCard{
     margin-right:5%;
 }
 
-.rock:hover, .paper:hover, .scissors:hover{
+.rockCard:hover, .paperCard:hover, .scissorsCard:hover{
     font-family: 'Russo One', sans-serif;
     box-shadow: 0 0 10px #f5f4f5, 0 0 20px #1212ca, 0 0 30px #3f51b5;
     background: linear-gradient(45deg, #fe6b8b, #ff8e53, #ffeb3b);
@@ -54,7 +54,7 @@ body h1 {
     cursor: pointer;
 }
 
-.innerText{
+.cardText{
     padding-top:5%;
     font-size: 2vw;
 }
@@ -78,7 +78,7 @@ body h1 {
 
 /* flex item 1 and 3 */
 .playerScore , .computerScore{
-    flex-basis: 12%;
+    flex-basis: 18%;
     background-color: #ff8e53;
     color:black;
     padding: 1%;

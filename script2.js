@@ -1,12 +1,25 @@
 // get rock paper and scissors cards from html
-var rock = document.querySelector(".rock");
-var paper = document.querySelector(".paper");
-var scissors = document.querySelector(".scissors");
+var rock = document.querySelector(".rockCard");
+var paper = document.querySelector(".paperCard");
+var scissors = document.querySelector(".scissorsCard");
 
-// get Score from html
-var displayResult = document.querySelector(".displayResult");
+// get Scoreboard from html
 var playerScore = document.querySelector(".playerScore");
 var computerScore = document.querySelector(".computerScore");
+
+var pointsPlayer = document.getElementById("player");
+var pointsComputer = document.getElementById("computer");
+
+// play single round
+//output result to console
+let roundCounter = 0;
+let scoreMessage = document.querySelector(".scoreMessage");
+
+if (roundCounter == 0) {
+  scoreMessage.textContent = "";
+} else {
+  scoreMessage.textContent = roundCounter;
+}
 
 // function for computer to choose rock paper or scissors
 let computerSelection = () => {
@@ -22,29 +35,51 @@ let computerSelection = () => {
 
 // when click on rock, assign "rock" to playerChoice
 rock.addEventListener("click", () => {
-  let player = "rock";
-  let computer = computerSelection();
-  let result = playRound(player, computer);
-  console.log(result);
-});
-// when click on paper, assign "paper" to playerChoice
-paper.addEventListener("click", () => {
-  let player = "paper";
-  let computer = computerSelection();
-  let result = playRound(player, computer);
-  console.log(result);
-});
-//when click on scissors, assign "scissors" to playerChoice
-scissors.addEventListener("click", () => {
-  let player = "scissors";
-  let computer = computerSelection();
-  let result = playRound(player, computer);
-  console.log(result);
+  roundCounter++;
+  if (roundCounter > 5) {
+    alert("stoooop");
+  } else {
+    let player = "rock";
+    let computer = computerSelection();
+    let result = playRound(player, computer);
+    console.log(result);
+  }
 });
 
-// play single round
-//output result to console
+// when click on paper, assign "paper" to playerChoice
+paper.addEventListener("click", () => {
+  roundCounter++;
+  if (roundCounter > 5) {
+    alert("stoooop");
+  } else {
+    let player = "paper";
+    let computer = computerSelection();
+    let result = playRound(player, computer);
+    console.log(result);
+  }
+});
+
+//when click on scissors, assign "scissors" to playerChoice
+scissors.addEventListener("click", () => {
+  roundCounter++;
+  if (roundCounter > 5) {
+    alert("stoooop");
+  } else {
+    let player = "scissors";
+    let computer = computerSelection();
+    let result = playRound(player, computer);
+    console.log(result);
+  }
+});
+
+let playerPoints = 0;
+let computerPoints = 0;
+
+pointsPlayer.textContent = playerPoints;
+pointsComputer.textContent = computerPoints;
+
 function playRound(player, computer) {
+  scoreMessage.textContent = "Round : " + roundCounter;
   if (player == computer) {
     const playertag = document.createElement("p");
     const computertag = document.createElement("p");
@@ -64,6 +99,8 @@ function playRound(player, computer) {
     computertag.classList.add("win");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
+    computerPoints++;
+    pointsComputer.textContent = computerPoints; // Update the pointsPlayer element
     return "You lose! Paper beats rock!";
   } else if (player == "rock" && computer == "scissors") {
     const playertag = document.createElement("p");
@@ -74,6 +111,8 @@ function playRound(player, computer) {
     computertag.classList.add("lose");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
+    playerPoints++;
+    pointsPlayer.textContent = playerPoints; // Update the pointsPlayer element
     return "You win! Rock beats scissors!";
   } else if (player == "paper" && computer == "rock") {
     const playertag = document.createElement("p");
@@ -84,6 +123,8 @@ function playRound(player, computer) {
     computertag.classList.add("lose");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
+    playerPoints++;
+    pointsPlayer.textContent = playerPoints; // Update the pointsPlayer element
     return "You win! Paper beats rock";
   } else if (player == "paper" && computer == "scissors") {
     const playertag = document.createElement("p");
@@ -94,6 +135,8 @@ function playRound(player, computer) {
     computertag.classList.add("win");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
+    computerPoints++;
+    pointsComputer.textContent = computerPoints; // Update the pointsPlayer element
     return "You lose! Scissors beats Paper";
   } else if (player == "scissors" && computer == "rock") {
     const playertag = document.createElement("p");
@@ -104,6 +147,8 @@ function playRound(player, computer) {
     computertag.classList.add("win");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
+    computerPoints++;
+    pointsComputer.textContent = computerPoints; // Update the pointsPlayer element
     return "You lose! Rock beats Scissors";
   } else if (player == "scissors" && computer == "paper") {
     const playertag = document.createElement("p");
@@ -114,6 +159,8 @@ function playRound(player, computer) {
     computertag.classList.add("lose");
     playerScore.appendChild(playertag);
     computerScore.appendChild(computertag);
+    playerPoints++;
+    pointsPlayer.textContent = playerPoints; // Update the pointsPlayer element
     return "You win! Scissors beats paper";
   } else {
     return "you made an invalid choice";
