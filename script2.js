@@ -10,11 +10,10 @@ var showComputerScore = document.querySelector(".computerScore");
 var showPlayerScoreText = document.getElementById("player");
 var showComputerScoreText = document.getElementById("computer");
 
-// play single round
-//output result to console
+//roundcounter
 let roundCounter = 0;
 let displayRounds = document.querySelector(".showRounds");
-
+// conditional that decides which round we currently are
 if (roundCounter == 0) {
   displayRounds.textContent = "";
 } else {
@@ -69,7 +68,7 @@ showComputerScoreText.textContent = computerPoints;
 let winner;
 
 function testWinner() {
-  if (showPlayerScoreText > computerPoints) {
+  if (playerPoints > computerPoints) {
     winner = "player";
   } else {
     winner = "Computer";
