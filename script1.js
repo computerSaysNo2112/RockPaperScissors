@@ -10,17 +10,15 @@ var showComputerScore = document.querySelector(".computerScore");
 var showPlayerScoreText = document.getElementById("player");
 var showComputerScoreText = document.getElementById("computer");
 
-//scoreboard and playerpoints
-let playerPoints = 0;
-let computerPoints = 0;
-
-showPlayerScoreText.textContent = playerPoints;
-showComputerScoreText.textContent = computerPoints;
-
 //roundcounter
-let roundCounter = 1;
+let roundCounter = 0;
 let displayRounds = document.querySelector(".showRounds");
-displayRounds.textContent = "Round " + roundCounter;
+// conditional that decides which round we currently are
+if (roundCounter == 0) {
+  displayRounds.textContent = "";
+} else {
+  displayRounds.textContent = roundCounter;
+}
 
 // function for computer to choose rock paper or scissors
 let computerSelection = () => {
@@ -34,56 +32,55 @@ let computerSelection = () => {
   }
 };
 
-// player plays game
-function playGame() {
-  roundCounter++;
-  displayRounds.textContent = "Round : " + roundCounter;
-  let player = this.querySelector("h3").innerText.toLowerCase(); // Access the innerText of h3 tag and convert to lower case
-  let computer = computerSelection();
-  playRound(player, computer);
-  if (roundCounter == 6) {
-    testWinner();
-  }
-}
-
 // when click on rock, assign "rock" to playerChoice
-rockButton.addEventListener("click", playGame);
+rockButton.addEventListener("click", () => {
+  roundCounter++;
+  let player = "rock";
+  let computer = computerSelection();
+  let result = playRound(player, computer);
+  console.log(result);
+});
 
 // when click on paper, assign "paper" to playerChoice
-paperButton.addEventListener("click", playGame);
+paperButton.addEventListener("click", () => {
+  roundCounter++;
+  let player = "paper";
+  let computer = computerSelection();
+  let result = playRound(player, computer);
+  console.log(result);
+});
 
 //when click on scissors, assign "scissors" to playerChoice
-scissorsButton.addEventListener("click", playGame);
+scissorsButton.addEventListener("click", () => {
+  roundCounter++;
+  let player = "scissors";
+  let computer = computerSelection();
+  let result = playRound(player, computer);
+  console.log(result);
+});
+
+let playerPoints = 0;
+let computerPoints = 0;
+
+showPlayerScoreText.textContent = playerPoints;
+showComputerScoreText.textContent = computerPoints;
 
 let winner;
 
 function testWinner() {
   if (playerPoints > computerPoints) {
     winner = "player";
-    displayRounds.textContent = winner + " wins";
-  } else if (playerPoints == computerPoints) {
-    winner = "Draw";
-    displayRounds.textContent = "it's a draw";
   } else {
-    winner = "computer";
-    displayRounds.textContent = winner + " wins";
+    winner = "Computer";
   }
-
-  rockButton.removeEventListener("click", playGame);
-  paperButton.removeEventListener("click", playGame);
-  scissorsButton.removeEventListener("click", playGame);
-
-  var resetButton = document.createElement("button");
-  var lineBreak = document.createElement("br");
-  resetButton.textContent = "Reset Game";
-  resetButton.addEventListener("click", () => {
-    location.reload(); // This will refresh the page
-  });
-  displayRounds.appendChild(lineBreak);
-  displayRounds.appendChild(resetButton);
+  return winner;
 }
 
 function playRound(player, computer) {
+  displayRounds.textContent = "Round : " + roundCounter;
+  if (roundCounter == 5) {
+    testWinner();
+  }
   if (player == computer) {
     const playertag = document.createElement("p");
     const computertag = document.createElement("p");
@@ -93,6 +90,7 @@ function playRound(player, computer) {
     computertag.classList.add("draw");
     showPlayerScore.appendChild(playertag);
     showComputerScore.appendChild(computertag);
+    return "You made the same choice. This is a draw";
   } else if (player == "rock" && computer == "paper") {
     const playertag = document.createElement("p");
     const computertag = document.createElement("p");
@@ -104,6 +102,7 @@ function playRound(player, computer) {
     showComputerScore.appendChild(computertag);
     computerPoints++;
     showComputerScoreText.textContent = computerPoints; // Update the showPlayerScoreText element
+    return "You lose! Paper beats rock!";
   } else if (player == "rock" && computer == "scissors") {
     const playertag = document.createElement("p");
     const computertag = document.createElement("p");
@@ -115,6 +114,7 @@ function playRound(player, computer) {
     showComputerScore.appendChild(computertag);
     playerPoints++;
     showPlayerScoreText.textContent = playerPoints; // Update the showPlayerScoreText element
+    return "You win! Rock beats scissors!";
   } else if (player == "paper" && computer == "rock") {
     const playertag = document.createElement("p");
     const computertag = document.createElement("p");
@@ -126,6 +126,7 @@ function playRound(player, computer) {
     showComputerScore.appendChild(computertag);
     playerPoints++;
     showPlayerScoreText.textContent = playerPoints; // Update the showPlayerScoreText element
+    return "You win! Paper beats rock";
   } else if (player == "paper" && computer == "scissors") {
     const playertag = document.createElement("p");
     const computertag = document.createElement("p");
@@ -137,6 +138,7 @@ function playRound(player, computer) {
     showComputerScore.appendChild(computertag);
     computerPoints++;
     showComputerScoreText.textContent = computerPoints; // Update the showPlayerScoreText element
+    return "You lose! Scissors beats Paper";
   } else if (player == "scissors" && computer == "rock") {
     const playertag = document.createElement("p");
     const computertag = document.createElement("p");
@@ -148,6 +150,7 @@ function playRound(player, computer) {
     showComputerScore.appendChild(computertag);
     computerPoints++;
     showComputerScoreText.textContent = computerPoints; // Update the showPlayerScoreText element
+    return "You lose! Rock beats Scissors";
   } else if (player == "scissors" && computer == "paper") {
     const playertag = document.createElement("p");
     const computertag = document.createElement("p");
@@ -159,5 +162,8 @@ function playRound(player, computer) {
     showComputerScore.appendChild(computertag);
     playerPoints++;
     showPlayerScoreText.textContent = playerPoints; // Update the showPlayerScoreText element
+    return "You win! Scissors beats paper";
+  } else {
+    return "you made an invalid choice";
   }
 }

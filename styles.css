@@ -1,8 +1,12 @@
 /* Body and text styles */
 body{
-    background:rgb(7, 7, 7);
+    background:rgb(60, 57, 57);
     text-align: center;
     color: #ededf1;
+}
+
+.container{
+    display: flex;
 }
 
 body h1 {
