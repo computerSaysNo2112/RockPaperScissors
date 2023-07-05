@@ -74,6 +74,7 @@ function testWinner() {
   scissorsButton.removeEventListener("click", playGame);
 
   var resetButton = document.createElement("button");
+  resetButton.classList.add("reset");
   var lineBreak = document.createElement("br");
   resetButton.textContent = "Reset Game";
   resetButton.addEventListener("click", () => {
