@@ -4,6 +4,7 @@ body{
     text-align: center;
     color: #ededf1;
     display: flex;
+    flex-wrap: wrap;
 }
 
 body h1 {
@@ -48,15 +49,49 @@ body h1 {
     width: 100%;
 }
 
-.rockCard, .paperCard, .scissorsCard{
+/* .rockCard, .paperCard, .scissorsCard{
     font-family: 'Russo One', sans-serif;
     color:white;
     border-radius: 13px;
-    width:13%;
+    width:5em;
     background-color: #3f51b5;
     border: 2px solid #ffffff00;
     padding: 0px;
     box-shadow: inset 20px 20px 60px #c17979,
+} */
+
+/* Default styles for all screen sizes */
+.rockCard,
+.paperCard,
+.scissorsCard {
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    border-radius: 13px;
+    width: 5em;
+    background-color: #3f51b5;
+    border: 2px solid #ffffff00;
+    padding: 0px;
+    /* box-shadow: inset 20px 20px 60px #c17979; */
+}
+
+/* Media query for screen sizes smaller than 600px */
+@media (max-width: 600px) {
+
+    .rockCard,
+    .paperCard,
+    .scissorsCard {
+        width: 3em;
+    }
+}
+
+/* Media query for screen sizes larger than 1200px */
+@media (min-width: 1200px) {
+
+    .rockCard,
+    .paperCard,
+    .scissorsCard {
+        width: 12em;
+    }
 }
 
 .rockCard , .paperCard{
@@ -124,7 +159,7 @@ body h1 {
 }
 
 .playerText,.computerText {
-    font-size: 2em;
+    font-size: 1em;
     font-weight: bold;
     width: 100%;
 }
